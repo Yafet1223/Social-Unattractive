@@ -1,50 +1,64 @@
-# Welcome to your Expo app 👋
+﻿# Unscroll Mobile
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Unscroll is an AI-driven social media detox platform built with Expo and React Native. It helps users reduce unhealthy social media consumption by tracking usage patterns, analyzing recommendation behavior, and reshaping feeds to make scrolling more intentional.
 
-## Get started
+## App Overview
+
+### Key features
+
+- **Usage analytics** — monitor daily and weekly social media habits with charts, streaks, and app breakdowns.
+- **Focus lock** — start distraction-free sessions that block apps and keep your attention on real life.
+- **Smart onboarding** — guide users through detox goals and encourage healthier browsing habits.
+- **Settings and personalization** — toggle sleep guard, intention checks, detox modes, and notification preferences.
+- **Tab-based navigation** — fast access to home, analytics, focus, and settings screens.
+
+## Project structure
+
+- `app/` — Expo Router entry points and screens.
+  - `app/_layout.tsx` — root stack layout for onboarding and tabs.
+  - `app/(tabs)/_layout.tsx` — tab navigator layout.
+  - `app/(tabs)/index.tsx` — dashboard home screen.
+  - `app/(tabs)/analytics.tsx` — analytics overview screen.
+  - `app/(tabs)/focus.tsx` — focus lock timer screen.
+  - `app/(tabs)/settings.tsx` — user preferences screen.
+  - `app/onboarding.tsx` — onboarding flow.
+- `components/` — reusable UI and themed components.
+- `hooks/` — custom hooks for theme and color scheme handling.
+- `assets/` — images and app assets.
+
+## Setup
 
 1. Install dependencies
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Start the Expo app
 
-## Learn more
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+3. Open on your device or emulator
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- Use the Expo Go app on Android or iOS
+- Use an Android emulator or iOS simulator
 
-## Join the community
+## Development notes
 
-Join our community of developers creating universal apps.
+- The project uses `nativewind` for utility styling and `expo-router` for file-based routing.
+- The theme is handled using custom `ThemedView` and `ThemedText` components.
+- The focus timer uses a React hook-based countdown that updates remaining session time.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Useful scripts
+
+- `npm run start` — start Expo development server
+- `npm run android` — open on Android device/emulator
+- `npm run ios` — open on iOS simulator
+- `npm run web` — open in a browser
+- `npm run lint` — run Expo linting checks
+
+## Goal
+
+This app is designed to help people regain control over social media by making usage visible, reducing addictive feed behavior, and supporting deliberate, healthier engagement.

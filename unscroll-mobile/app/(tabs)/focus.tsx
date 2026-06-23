@@ -40,7 +40,7 @@ export default function Focus() {
       }, 1000);
     }
     return () => clearInterval(intervalRef.current);
-  }, [active]);
+  }, [active, remaining]);
 
   const formatTime = (secs: number) => {
     const m = Math.floor(secs / 60);

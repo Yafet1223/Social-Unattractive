@@ -46,7 +46,7 @@ export default function Onboarding() {
 
       {/* Skip */}
       <View className="flex-row justify-end px-6 pt-2">
-        <TouchableOpacity onPress={() => router.replace('/(tabs)')}>
+        <TouchableOpacity onPress={() => router.replace('/') }>
           <Text className="text-gray-500 text-xs tracking-widest" style={{ fontFamily: 'Courier New' }}>SKIP</Text>
         </TouchableOpacity>
       </View>
@@ -84,7 +84,7 @@ export default function Onboarding() {
           <TouchableOpacity
             className="rounded-2xl py-5 items-center"
             style={{ backgroundColor: '#ff3b3b', shadowColor: '#ff3b3b', shadowOpacity: 0.35, shadowRadius: 20, elevation: 8 }}
-            onPress={() => isLast ? router.replace('/(tabs)') : setStep(step + 1)}
+            onPress={() => isLast ? router.replace('/') : setStep(step + 1)}
           >
             <Text className="text-white font-bold tracking-widest" style={{ fontFamily: 'Courier New', fontSize: 14 }}>
               {isLast ? 'GET STARTED →' : 'NEXT →'}
